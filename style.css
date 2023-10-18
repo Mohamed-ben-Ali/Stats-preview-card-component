@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Variables */
+/* S  T A R T VARIABLES */
 :root {
   --body-background: hsl(233, 47%, 7%);
   --card-background: hsl(244, 38%, 16%);
@@ -13,6 +13,27 @@
   --heading-font: "Inter", sans-serif;
   --p-font: "Lexend Deca", sans-serif;
 }
+/* E  N D VARIABLES */
+/* Start Midea-Queries */
+@media (max-width:991px) {
+  section{
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-block: 6rem;
+    margin-inline: 2rem;
+  }
+  .image , img{
+    width: 100%;
+  }
+  .content{
+    text-align: center;
+  }
+  .content .box{
+    flex-direction: column;
+  }
+}
+/* End Midea-Queries */
+
 body {
   background-color: var(--body-background);
   color: var(--main-color);
@@ -33,30 +54,14 @@ section {
   border-radius: 0.5rem;
   overflow: hidden;
 }
-@media (max-width: 767px) {
-  section {
-    flex-direction: column-reverse;
-    margin-block-start: 8rem;
-    margin-inline: 5rem;
-  }
-}
 section .content {
   padding: 4rem 5rem 4rem 4rem;
 }
-@media (max-width: 767px) {
-  section .content {
-    text-align: center;
-  }
-}
+
 section .content h1 {
   font-family: var(--heading-font);
   font-weight: 700;
   font-size: 2.2rem;
-}
-@media (max-width: 767px) {
-  section .content h1 {
-    font-size: 2.8rem;
-  }
 }
 section .content h1 span {
   color: hsl(277, 64%, 61%);
@@ -66,21 +71,11 @@ section .content p {
   line-height: 1.75;
   color: var(--main-paragraph);
 }
-@media (max-width: 767px) {
-  section .content p {
-    font-size: 1.35rem;
-  }
-}
 section .box {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
   margin-block-start: 4rem;
-}
-@media (max-width: 767px) {
-  section .box {
-    flex-direction: column;
-  }
 }
 section .box div {
   display: flex;
@@ -88,29 +83,14 @@ section .box div {
   align-items: center;
   gap: 0.5rem;
 }
-@media (max-width: 767px) {
-  section .box div {
-    margin-bottom: 1rem;
-  }
-}
 section .box div .number {
   font-family: var(--heading-font);
   font-weight: 700;
   font-size: 1.3rem;
   text-transform: uppercase;
 }
-@media (max-width: 767px) {
-  section .box div .number {
-    font-size: 2.3rem;
-  }
-}
 section .box div .title {
   color: var(--stat-headings);
-}
-@media (max-width: 767px) {
-  section .box div .title {
-    font-size: 1.5rem;
-  }
 }
 .image {
   position: relative;
@@ -126,14 +106,3 @@ section .box div .title {
 img {
   display: block;
 }
-@media (max-width: 767px) {
-  img {
-    width: 100%;
-  }
-}
-/* .attribution {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-} */
